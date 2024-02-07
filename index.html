@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Landing page
+    </title>
+    <style>
+        .color-red {
+            color: red;
+        }
+
+        .fonst-large {
+            font-size: 3rem;
+        }
+
+        .magic {
+            font-style: italic;
+        }
+
+        .bgBlack {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+    </div>
+    <div class="footer">
+
+    </div>
+    <script src="js/negativeJS.js"></script>
+    <script>
+        domReady(function () {
+            /* 
+                * Create div with class main-content inside wrapper
+            */
+            const wrapper = nJS('.wrapper');
+            wrapper.appendElement('<div>' , {
+                'class' : 'main-content'
+            });
+            wrapper.appendElement('div' , {
+                'class' : 'main-content'
+            });
+
+            nJS('.wrapper').on('click' , function () {
+                alert(wrapper.htmlContent());
+            });
+        });
+    </script>
+</body>
+
+
+</html>
